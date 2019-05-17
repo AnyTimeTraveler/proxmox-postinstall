@@ -1,8 +1,8 @@
-# xshok-proxmox :: eXtremeSHOK.com Proxmox (pve)
+# xshok-proxmox :: Adaptation of AnyTimeTraveler Proxmox (pve)
 
 ## Optimization / Post Install Script (install-post.sh aka postinstall.sh) *run once*
 *not required if server setup with install-hetzner.sh*
-* 'reboot-quick' command which uses kexec to boot the latest kernel set in the boot loader
+~~* 'reboot-quick' command which uses kexec to boot the latest kernel set in the boot loader~~
 * Force APT to use IPv4
 * Disable the enterprise repo, enable the public repo, Add non-free sources
 * Fixes known bugs (public key missing, max user watches, etc)
@@ -12,24 +12,24 @@
 * Increase max Key limits,  max user watches, max File Discriptor Limits, ulimits
 * Detect AMD EPYC CPU and install kernel 4.15
 * Detect AMD EPYC CPU and Apply EPYC fixes to kernel and KVM
-* Install and configure ZFS-auto-snapshots (12x5min, 7daily, 4weekly, 3monthly)
+~~* Install and configure ZFS-auto-snapshots (12x5min, 7daily, 4weekly, 3monthly)~~
 * Disable portmapper / rpcbind (security)
 * set-timezone UTC and enable timesyncd as nntp client
 * Set pigz to replace gzip, 2x faster gzip compression
-* Detect OVH Server and install OVH RTM (real time monitoring)"
+~~* Detect OVH Server and install OVH RTM (real time monitoring)"~~
 * Protect the webinterface with fail2ban (security)
-* Optimize ZFS arc size depending on installed memory, Use 1/16 RAM for MAX cache, 1/8 RAM for MIN cache, or 1GB
-* ZFS Tuning, set prefetch method and max write speed to l2arc
+~~* Optimize ZFS arc size depending on installed memory, Use 1/16 RAM for MAX cache, 1/8 RAM for MIN cache, or 1GB~~
+~~* ZFS Tuning, set prefetch method and max write speed to l2arc~~
 * Enable TCP BBR congestion control, improves overall network throughput
 
-https://raw.githubusercontent.com/extremeshok/xshok-proxmox/master/install-post.sh
+https://raw.githubusercontent.com/AnyTimeTraveler/xshok-proxmox/master/install-post.sh
 
-return value is 0
+reboots after 
 
 Or run *install-post.sh* after installation
 
 ```
-wget https://raw.githubusercontent.com/extremeshok/xshok-proxmox/master/install-post.sh -c -O install-post.sh && bash install-post.sh && rm install-post.sh
+wget https://raw.githubusercontent.com/AnyTimeTraveler/xshok-proxmox/master/install-post.sh -c -O install-post.sh && bash install-post.sh
 ```
 
 ## Install Proxmox Recommendations
