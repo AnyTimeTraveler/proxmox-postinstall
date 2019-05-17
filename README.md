@@ -21,6 +21,8 @@
 * ~~Optimize ZFS arc size depending on installed memory, Use 1/16 RAM for MAX cache, 1/8 RAM for MIN cache, or 1GB~~
 * ~~ZFS Tuning, set prefetch method and max write speed to l2arc~~
 * Enable TCP BBR congestion control, improves overall network throughput
+* Set shell to ZSH
+* Install Oh-My-Zsh
 
 https://raw.githubusercontent.com/AnyTimeTraveler/xshok-proxmox/master/install-post.sh
 
