@@ -24,14 +24,14 @@
 * Set shell to ZSH
 * Install Oh-My-Zsh
 
-https://raw.githubusercontent.com/AnyTimeTraveler/xshok-proxmox/master/install-post.sh
+https://raw.githubusercontent.com/AnyTimeTraveler/proxmox-postinstall/master/install-post.sh
 
 reboots after 
 
 Or run *install-post.sh* after installation
 
 ```
-wget https://raw.githubusercontent.com/AnyTimeTraveler/xshok-proxmox/master/install-post.sh -c -O install-post.sh && bash install-post.sh
+wget https://raw.githubusercontent.com/AnyTimeTraveler/proxmox-postinstall/master/install-post.sh -c -O install-post.sh && bash install-post.sh
 ```
 
 ## Install Proxmox Recommendations
